@@ -8,26 +8,20 @@
 </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-                mdl-layout--fixed-tabs">
+                mdl-layout--fixed-tabs" id="router">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">Poow</span>
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Accueil</a>
-                <a href="#fixed-tab-2" class="mdl-layout__tab">Connexion</a>
-                <a href="#fixed-tab-3" class="mdl-layout__tab">Salles</a>
+                <a v-link="{ path: '//', activeClass: 'is-active' }" class="mdl-layout__tab">Accueil</a>
+                <a v-link="{ path: '/login', activeClass: 'is-active' }" class="mdl-layout__tab">Connexion</a>
+                <a v-link="{ path: '/rooms', activeClass: 'is-active' }" class="mdl-layout__tab">Salles</a>
             </div>
         </header>
-        <main class="mdl-layout__content">
-            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-                <div class="page-content">Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br />Accueil<br /></div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-                <div class="page-content">Connexion</div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-                <div class="page-content">Salles</div>
+        <main class="mdl-layout__content" id="router">
+            <section class="mdl-layout__tab-panel is-active">
+                <div class="page-content"><router-view></router-view></div>
             </section>
         </main>
         <footer class="mdl-mini-footer docs-footer">
