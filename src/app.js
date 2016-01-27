@@ -2,6 +2,7 @@
 
 import '../bower_components/material-design-lite/material.min.css';
 import './styles/fixes.css';
+import './styles/main.css'
 
 import '../bower_components/material-design-lite/material.min.js';
 
