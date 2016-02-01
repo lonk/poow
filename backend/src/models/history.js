@@ -24,7 +24,7 @@ History.ensureIndex('createdAt');
 History.ensureIndex('editedAt');
 
 History.associate = models => {
-    models.History.hasMany(models.User, 'users', 'id', 'userId');
+    models.History.hasAndBelongsToMany(models.User, 'users', 'id', 'userId');
 };
 
 export default History;

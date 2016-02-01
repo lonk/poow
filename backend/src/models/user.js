@@ -32,7 +32,7 @@ User.ensureIndex('createdAt');
 User.ensureIndex('editedAt');
 
 User.associate = models => {
-
+    models.User.hasAndBelongsToMany(models.History, 'histories', 'id', 'historyId');
 };
 
 export default User;
