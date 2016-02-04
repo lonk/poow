@@ -23,3 +23,15 @@
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+.mdl-card {
+    width:100%;
+}
+
+.content-grid {
+    max-width: 1200px;
+}
+
+.mdl-textfield {
+    width:100%;
+}

@@ -8,8 +8,11 @@ import '../bower_components/material-design-lite/material.min.js';
 
 import Vue from '../bower_components/vue/dist/vue';
 import VueRouter from '../bower_components/vue-router/dist/vue-router';
+import VueResource from '../bower_components/vue-resource/dist/vue-resource';
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
+
 var root = Vue.extend({
     data: () => {
           return {};
@@ -21,13 +24,13 @@ router.map({
     '/': {
         component: view('home')
     },
-    '/login': {
-        component: view('login')
+    '/register': {
+        component: view('register')
     },
     '/rooms': {
         component: view('rooms')
     }
-})
+});
 
 router.start(root, '#router');
 
