@@ -17,9 +17,10 @@ let auth = (localStorage.getItem('token')) ? true : false;
 
 let root = Vue.extend({
     data: () => {
-            return {
-                authenticated: auth
-            };
+        return {
+            authenticated: auth,
+            router: router
+        };
     }
 });
 let router = new VueRouter();
@@ -33,6 +34,9 @@ router.map({
     },
     '/rooms': {
         component: view('rooms')
+    },
+    '/logout': {
+        component: view('logout')
     }
 });
 

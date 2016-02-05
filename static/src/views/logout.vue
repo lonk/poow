@@ -1,0 +1,1 @@
+<script src="../controllers/logout.js" />

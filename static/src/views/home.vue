@@ -8,7 +8,7 @@
             <h3>Classement</h3>
             Tableau
         </div>
-        <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-cell mdl-cell--4-col" v-if="!this.$root.authenticated">
             <div class="mdl-card mdl-shadow--6dp">
                 <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
                     <h2 class="mdl-card__title-text">Connexion</h2>
