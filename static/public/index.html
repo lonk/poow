@@ -16,7 +16,8 @@
             <div class="poow-header mdl-layout__tab-bar mdl-js-ripple-effect">
                 <a v-link="{ path: '//', activeClass: 'is-active' }" class="mdl-layout__tab">Accueil</a>
                 <a v-link="{ path: '/rooms', activeClass: 'is-active' }" class="mdl-layout__tab">Jouer</a>
-                <a v-link="{ path: '/register', activeClass: 'is-active' }" class="mdl-layout__tab">Inscription</a>
+                <a v-link="{ path: '/register', activeClass: 'is-active' }" class="mdl-layout__tab" v-if="!authenticated">Inscription</a>
+                <a v-link="{ path: '/logout', activeClass: 'is-active' }" class="mdl-layout__tab" v-if="authenticated">Déconnexion</a>
             </div>
         </header>
         <main class="mdl-layout__content" id="router">

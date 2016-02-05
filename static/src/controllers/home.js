@@ -18,7 +18,8 @@ export default {
             }
             Vue.http.post('http://localhost:8082/api/login', data)
             .then((res) => {
-                console.log('Ok');
+                localStorage.setItem('token', res.data.user.token);
+                window.app.authenticated = true;
             })
             .catch((err) => {
                 console.log('Err');
