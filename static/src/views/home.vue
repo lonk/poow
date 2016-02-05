@@ -13,7 +13,7 @@
                 <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
                     <h2 class="mdl-card__title-text">Connexion</h2>
                 </div>
-                <form v-on:submit.prevent="login">
+                <form method="post" v-on:submit.prevent="login">
                     <fieldset>
                         <div class="mdl-card__supporting-text">
                                 <div class="mdl-textfield mdl-js-textfield">

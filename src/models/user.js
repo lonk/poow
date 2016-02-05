@@ -9,9 +9,9 @@ const User = thinky.createModel('User', {
     password   : String,
     email      : String,
     bio        : String,
-    lastLogin  : Date,
+    lastLogin  : type.date().optional(),
     createdAt  : type.date().default(new Date()),
-    editedAt   : Date,
+    editedAt   : type.date().optional(),
     isRemoved  : type.boolean().default(false)
 }, {
     enforce_missing: true,

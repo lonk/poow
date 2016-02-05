@@ -7,16 +7,22 @@ export default {
     data () {
         return {
            username: '',
-           userpass: ''
+           userpass: '',
+           userconf: '',
+           usermail: '',
+           userbio: ''
         }
     },
     methods: {
-        login(e) {
+        register(e) {
             let data = {
                 username: this.username,
-                userpass: this.userpass
+                userpass: this.userpass,
+                userconf: this.userconf,
+                usermail: this.usermail,
+                userbio: this.userbio
             }
-            Vue.http.post('http://localhost:8082/api/login', data)
+            Vue.http.post('http://localhost:8082/api/register', data)
             .then((res) => {
                 console.log('Ok');
             })
