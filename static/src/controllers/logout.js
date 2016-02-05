@@ -1,3 +1,5 @@
+import Vue from '../../bower_components/vue/dist/vue';
+
 export default {
     ready() {
         localStorage.removeItem('token');
