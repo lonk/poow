@@ -15,14 +15,14 @@ Vue.use(VueResource);
 
 let auth = (localStorage.getItem('token')) ? true : false;
 
-var root = Vue.extend({
+let root = Vue.extend({
     data: () => {
             return {
                 authenticated: auth
             };
     }
 });
-var router = new VueRouter();
+let router = new VueRouter();
 
 router.map({
     '/': {
@@ -37,12 +37,9 @@ router.map({
 });
 
 router.start(root, '#router');
-let app = router.app;
 
 function view(name) {
     return function(resolve) {
         require(['./views/' + name + '.vue'], resolve);
     }
 };
-
-window.app = app;
